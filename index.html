@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="source/css/players.css">
-    <script src="source/jquery/jquery-3.3.1.min.js"></script>
-    <title>Siberian honey</title>
+    <script src="source/packages/jquery/jquery-3.3.1.min.js"></script>
+    <!--<script src="source/packages/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+    <!--<link rel="stylesheet" href="source/packages/bootstrap-3.3.7-dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="source/css/style.css">
+    <title>Cooking wok!</title>
 </head>
     <body>
-        <video id="player1" class="bgplayer height-dependent" src="source/video/FoodPack1_09_Videvo.webm" muted autoplay loop></video>
+        <div class="container">
+            <header>
+                <video id="vid1" src="source/video/FoodPack1_13_Videvo.webm" muted></video>
+                <video id="vid2" src="source/video/FoodPack1_09_Videvo.webm" muted></video>
+                <div class="on-video">
+                    <div class="header-text">
+                        <h1>Cooking wok!</h1>
+                        <h2>We collected the best recipes on preparation the wok</h2>
+                    </div>
+                </div>
+            </header>
 
-        <video id="player2" src="source/video/FoodPack1_13_Videvo.webm" class="bgplayer height-dependent" muted autoplay loop></video>
+            <section class="about-production">
+                <div class="about-production-block">
+                    <h1 class="about-production-title">Shortly about that as prepare</h1>
+                    <div class="about-production-content">
+                        <iframe src="https://www.youtube.com/embed/H_Tm5ha3MDk?rel=0&amp;showinfo=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <script>
-
+            $(window).ready(function() {
+                var vid1 = document.getElementById("vid1");
+                var vid2 = document.getElementById("vid2");
+                vid1.addEventListener('loadeddata', function(){
+                    $('body').css('display', 'block');
+                    $('#vid1').css('display','block');
+                    vid1.play();
+                }, false);
+                vid1.addEventListener('ended', function(){
+                    $('#vid1').css('display','none');
+                    $('#vid2').css('display','block');
+                    vid2.play();
+                }, false);
+                vid2.addEventListener('ended', function(){
+                    $('#vid1').css('display','block');
+                    $('#vid2').css('display','none');
+                    vid1.play();
+                }, false);
+            });
         </script>
-
     </body>
 </html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Mali:400,500,700');
+body {
+    margin: 0;
+    display: none;
+}
+body::-webkit-scrollbar {
+    width: 0 !important;
+}
+.container {
+    width: 100%;
+    font-family: 'Mali', cursive;
+}
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+}
+#vid1 {
+    display: none;
+}
+#vid2 {
+    display: none;
+}
+.on-video {
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 150px);
+    width: 700px;
+    height: 300px;
+}
+.header-text {
+    text-align: center;
+    color: #eee;
+    margin: 64px 0;
+}
+.header-text h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+.header-text h2 {
+    font-weight: 400;
+    font-size: 32px;
+}
+.about-production {
+    height: 100vh;
+    width: 100%;
+    background: url("../img/background.jpg");
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.about-production-block {
+    border: 2px solid #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 14px;
+    position: absolute;
+    top: calc(50% - 303px);
+    left: calc(50% - 422px);
+    background: rgba(255, 255, 255, 0.3);
+}
+.about-production-title {
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 50px 0;
+    font-weight: 500;
+}
+.about-production-content iframe {
+    margin: 0 auto;
+    display: block;
+    width: 780px;
+    height: 439px;
+}
+@media (max-width: 1100px) {
+    .on-video {
+        left: calc(50% - 300px);
+        top: calc(50% - 125px);
+        width: 600px;
+        height: 250px;
+    }
+    .header-text {
+        margin: 60px 0;
+    }
+    .header-text h1 {
+        margin: 0 0 16px 0;
+        font-size: 36px;
+    }
+    .header-text h2 {
+        margin: 0;
+        padding: 0 30px;
+        font-size: 28px;
+    }
+    .about-production-block {
+        top: calc(50% - 277.5px);
+        left: calc(50% - 382px);
+    }
+    .about-production-title {
+        font-size: 36px;
+    }
+    .about-production-content iframe {
+        width: 700px;
+        height: 394px;
+    }
+}
+@media (max-width: 990px) {
+    .on-video {
+        left: calc(50% - 250px);
+        top: calc(50% - 100px);
+        width: 500px;
+        height: 200px;
+    }
+    .header-text {
+        margin: 36px 0;
+    }
+    .about-production-block {
+        top: calc(50% - 255px);
+        left: calc(50% - 342px);
+    }
+    .about-production-title {
+        font-size: 32px;
+    }
+    .about-production-content iframe {
+        width: 620px;
+        height: 349px;
+    }
+}
+@media (max-width: 850px) {
+    .on-video {
+        left: calc(50% - 200px);
+        top: calc(50% - 75px);
+        width: 400px;
+        height: 150px;
+    }
+    .header-text {
+        margin: 20px 0;
+    }
+    .header-text h1 {
+        margin: 0 0 16px 0;
+        font-size: 24px;
+    }
+    .header-text h2 {
+        margin: 0;
+        font-size: 20px;
+    }
+    .about-production-block {
+        top: calc(50% - 230px);
+        left: calc(50% - 302px);
+    }
+    .about-production-title {
+        font-size: 28px;
+    }
+    .about-production-content iframe {
+        width: 540px;
+        height: 304px;
+    }
+}
+@media (max-width: 650px) {
+    .on-video {
+        left: calc(50% - 150px);
+        top: calc(50% - 50px);
+        width: 300px;
+        height: 100px;
+    }
+    .header-text {
+        margin: 10px 0;
+    }
+    .header-text h1 {
+        margin: 0 0 5px 0;
+        font-size: 20px;
+    }
+    .header-text h2 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .about-production-block {
+        top: calc(50% - 210px);
+        left: calc(50% - 272px);
+    }
+    .about-production-title {
+        font-size: 26px;
+    }
+    .about-production-content iframe {
+        width: 480px;
+        height: 270px;
+    }
+}
+@media (max-width: 400px) {
+    .about-production-block {
+        top: calc(50% - 216px);
+        left: calc(50% - 162px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about-production-title {
+        width: 260px;
+        margin: 0 auto 30px;
+    }
+    .about-production-content iframe {
+        width: 300px;
+        height: 270px;
+    }
+}
